@@ -1,0 +1,400 @@
+.main {
+	background-color: rgb(11, 17, 30);
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	font-family: "lora-regular", serif;
+	font-size: 1.7rem;
+	line-height: 3rem;
+	color: #6e6e6e;
+	overflow: hidden;
+	font-size: 10px;
+	scroll-behavior: smooth;
+}
+
+#intro {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+	height: 100vh;
+	min-height: 720px;
+	display: table;
+	position: relative;
+	text-align: center;
+	z-index: 0;
+}
+
+.intro-content {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	-webkit-transform: translateY(-2.1rem);
+	-ms-transform: translateY(-2.1rem);
+	transform: translateY(-2.1rem);
+	z-index: 3;
+	position: relative;
+}
+
+.intro-content h1 {
+	color: #ffffff;
+	font-family: "Roboto-Slab", serif;
+	font-size: 5rem;
+	line-height: 1.071;
+	max-width: 1000px;
+	margin-top: 0;
+	margin-bottom: 0.6rem;
+	margin-left: auto;
+	margin-right: auto;
+	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.intro-content h3 {
+	color: rgb(149, 128, 255);
+	font-family: "Roboto-Slab", serif;
+	font-size: 2.5rem;
+	line-height: 1.565;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.intro-content .intro-position {
+	font-family: "lora-regular", serif;
+	font-size: 1.1rem;
+	line-height: 2.4rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	color: #ffffff;
+	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.intro-content .intro-position span {
+	display: inline-block;
+}
+
+.intro-content .intro-position span::after {
+	content: "|";
+	text-align: center;
+	display: inline-block;
+	padding: 0 8px 0 14px;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.intro-content .intro-position span:first-child::before {
+	content: "|";
+	text-align: center;
+	display: inline-block;
+	padding: 0 14px 0 8px;
+	color: rgba(255, 255, 255, 0.3);
+}
+
+.homeContainer {
+	background-color: #ffffff;
+	padding-top: 4vmax;
+	border-radius: 0 0 200px 200px;
+	border-bottom: 200px solid white;
+	position: relative;
+	z-index: 1;
+}
+
+.homeContainer>h3 {
+	text-align: center;
+	color: rgb(22, 20, 20, 0.904);
+	padding: 5vmax;
+	font-family: "Ubuntu", sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+	html {
+		font-size: 9px;
+	}
+}
+
+.homeSkills {
+	transform: translateY(-50px);
+	background-color: hsl(219, 48%, 8%);
+	height: 1500px;
+	position: relative;
+	margin-bottom: -180px;
+	padding: 200px;
+	box-sizing: border-box;
+	perspective: 450px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	overflow-x: hidden;
+}
+
+.homeSkills>h3 {
+	text-align: center;
+	color: white;
+	margin-bottom: 6vmax;
+	font-size: 5vmax;
+}
+
+.homeCubeSkills {
+	width: 120px;
+	height: 120px;
+	animation: cubeRotation 15s linear infinite alternate;
+	transform-style: preserve-3d;
+}
+
+.homeCubeSkillsFaces {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0 10px rgb(0, 0, 0);
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	opacity: 0.8;
+}
+
+.homeCubeSkillsFaces>img {
+	width: inherit;
+	height: inherit;
+}
+
+.homeCubeSkillsFace1 {
+	transform: translate3d(0, 0, 100px);
+}
+
+.homeCubeSkillsFace2 {
+	transform: rotateY(180deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace3 {
+	transform: rotateY(-90deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace4 {
+	transform: rotateY(90deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace5 {
+	transform: rotateX(90deg) translate3d(0, 0, 150px);
+}
+
+.homeCubeSkillsFace6 {
+	transform: rotateX(-90deg) translate3d(0, 0, 150px);
+}
+
+.cubeShadow {
+	width: 300px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.171);
+	border-radius: 50%;
+	animation: cubeShadow 1s ease-in-out infinite alternate;
+	filter: blur(3px);
+}
+
+.homeskillsBox {
+	background-color: hsl(250, 100%, 75%);
+	padding: 2vmax;
+	border-radius: 15px;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	right: -300px;
+	animation: homeskillsBoxAnimationOn 1s linear forwards;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-fill-mode: forwards;
+
+}
+
+.homeskillsBox>svg {
+	font-size: 4vmax;
+	color: rgb(255, 255, 255);
+	border-radius: 5px;
+	transition: all 0.5s;
+	margin: 10px;
+}
+
+.homeskillsBox>svg:hover {
+	transform: scale(1.5);
+}
+
+@keyframes move-twink-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -10000px 5000px;
+	}
+}
+
+@-webkit-keyframes move-twink-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -10000px 5000px;
+	}
+}
+
+@-moz-keyframes move-twink-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -10000px 5000px;
+	}
+}
+
+@-ms-keyframes move-twink-back {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: -10000px 5000px;
+	}
+}
+
+.stars,
+.twinkling {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.stars {
+	background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+	z-index: 0;
+}
+
+.twinkling {
+	background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+	z-index: 1;
+
+	-moz-animation: move-twink-back 200s linear infinite;
+	-ms-animation: move-twink-back 200s linear infinite;
+	-o-animation: move-twink-back 200s linear infinite;
+	-webkit-animation: move-twink-back 200s linear infinite;
+	animation: move-twink-back 200s linear infinite;
+}
+
+.well {
+	position: relative;
+	overflow: hidden;
+	transition: 0.6s cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.panel {
+	position: relative;
+	height: 100vh;
+	overflow: hidden;
+	box-sizing: border-box;
+}
+
+@keyframes cubeRotation {
+	to {
+		transform: rotateY(360deg) rotateX(480deg) rotateZ(720deg);
+	}
+}
+
+@keyframes cubeShadow {
+	to {
+		transform: scale(1.2) translateY(-10px);
+	}
+}
+
+@keyframes homeskillsBoxAnimationOn {
+	from {
+		right: -300px;
+	}
+
+	to {
+		right: 20px;
+	}
+}
+
+@keyframes homeskillsBoxAnimationOff {
+	from {
+		right: 20px;
+	}
+
+	to {
+		right: -300px;
+	}
+}
+
+.homeScrollBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	left: 50%;
+	border-radius: 100%;
+	transform: translateY(-150%);
+	padding: 0.5vmax;
+	animation: scrollPop 0.5s ease-in infinite alternate;
+}
+
+.homeScrollBtn>svg {
+	font-size: 2vmax;
+	color: rgb(255, 255, 255);
+}
+
+@keyframes scrollPop {
+	to {
+		transform: translateY(-120%);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.homeCanvasContainer>a {
+		transform: translate(-50%, 0%);
+		bottom: 10%;
+		top: unset;
+	}
+
+	.homeCanvasBox>h2 {
+		font: 900 2rem "Ubuntu Mono", "Roboto";
+		letter-spacing: 15px;
+		line-height: 60px;
+	}
+
+	.homeCubeSkills {
+		width: 100px;
+		height: 100px;
+	}
+
+	.homeCubeSkillsFace1 {
+		transform: translate3d(0, 0, 75px);
+	}
+
+	.homeCubeSkillsFace2 {
+		transform: rotateY(180deg) translate3d(0, 0, 75px);
+	}
+
+	.homeCubeSkillsFace3 {
+		transform: rotateY(-90deg) translate3d(0, 0, 75px);
+	}
+
+	.homeCubeSkillsFace4 {
+		transform: rotateY(90deg) translate3d(0, 0, 75px);
+	}
+
+	.homeCubeSkillsFace5 {
+		transform: rotateX(90deg) translate3d(0, 0, 75px);
+	}
+
+	.homeCubeSkillsFace6 {
+		transform: rotateX(-90deg) translate3d(0, 0, 75px);
+	}
+}
