@@ -37,9 +37,7 @@ const About = ({ about }) => {
 							textAlign: "right",
 						}}
 					>
-						I am Ritam, an Electronics and Communication Engineer by
-						degree but a Software Engineer by passion.<br></br>I
-						enjoy working on projects and development.
+						{about.description}
 					</Typography>
 				</div>
 			</div>
