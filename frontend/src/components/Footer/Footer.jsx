@@ -19,14 +19,14 @@ const Footer = () => {
 			</div>
 			<div>
 				<Typography variant="h6">Social Media</Typography>
-				<a href="https://github.com/imRitam10" target="black">
+				<a href="https://github.com/ritambhadra" target="black">
 					<BsGithub />
 				</a>
 				<a href="https://instagram.com/imrb.deb/" target="black">
 					<BsInstagram />
 				</a>
 				<a
-					href="https://www.linkedin.com/in/imritam2910/"
+					href="https://www.linkedin.com/in/ritambhadra/"
 					target="black"
 				>
 					<BsLinkedin />
