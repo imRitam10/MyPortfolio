@@ -6,8 +6,9 @@
 
 ## Website Demo
 
-![video] (https://drive.google.com/file/d/1wevK86eFf2UU7QsqjAMyVDoWltUsK1EG/view?usp=sharingss)
+https://user-images.githubusercontent.com/68398051/219750028-0afbd93c-6b9e-4c3f-abe0-afc097446e05.mp4
 
+ 
 ## Landing Page
 
 ![landing page](/Screenshots/landingPage.png)
