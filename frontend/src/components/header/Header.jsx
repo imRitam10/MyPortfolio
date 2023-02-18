@@ -17,7 +17,7 @@ const Header = () => {
 			logoWidth="250px"
 			logoHoverColor="hsl(250, 100%, 75%)"
 			nav2justifyContent="space-around"
-			nav3justifyContent="space-around"
+			// nav3justifyContent="space-around"
 			link1Text="Home"
 			link2Text="About"
 			link3Text={false}
