@@ -9,9 +9,9 @@ const Footer = () => {
 			<div>
 				<Typography variant="h5">About Me</Typography>
 				<Typography style={{ textAlign: "justify" }}>
-					Hi🙋‍♂️I am Ritam, an Electronics and Communication engineer by
-					degree but a Software Engineer by passion. If you have any
-					exciting project in mind or want to chat, reach out on{" "}
+					Hi 🙋‍♂️ I am Ritam, an Electronics and Communication engineer
+					by degree but a Software Engineer by passion. If you have
+					any exciting project in mind or want to chat, reach out on{" "}
 					<b style={{ color: "rgb(149, 128, 255)" }}>
 						imritambhadra10@gmail.com
 					</b>

@@ -255,14 +255,23 @@ export const updateUser = async (req, res) => {
 
 export const addTimeline = async (req, res) => {
 	try {
-		const { title, description, date } = req.body;
+		const { title, description, url, date } = req.body;
 		const user = await User.findById(req.user._id);
 
-		user.timeline.unshift({
-			title,
-			description,
-			date,
-		});
+		if (url) {
+			user.timeline.unshift({
+				title,
+				description,
+				url,
+				date,
+			});
+		} else {
+			user.timeline.unshift({
+				title,
+				description,
+				date,
+			});
+		}
 
 		await user.save();
 
