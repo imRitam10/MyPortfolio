@@ -17,11 +17,12 @@ const Timeline = () => {
 
 	const [title, setTitle] = useState("");
 	const [description, setDescription] = useState("");
+	const [url, setUrl] = useState("");
 	const [date, setDate] = useState("");
 
 	const submitHandler = async (e) => {
 		e.preventDefault();
-		await dispatch(addTimeline(title, description, date));
+		await dispatch(addTimeline(title, description, url, date));
 		dispatch(getUser());
 	};
 	const deleteHandler = async (id) => {
@@ -78,6 +79,13 @@ const Timeline = () => {
 						className="adminPanelInputs"
 					/>
 					<input
+						type="url"
+						placeholder="Url"
+						value={url}
+						onChange={(e) => setUrl(e.target.value)}
+						className="adminPanelInputs"
+					/>
+					<input
 						type="date"
 						placeholder="Date"
 						value={date}
@@ -112,6 +120,7 @@ const Timeline = () => {
 								>
 									{item.description}
 								</Typography>
+								<Typography>{item.url}</Typography>
 								<Typography
 									variant="body1"
 									style={{ fontWeight: 600 }}

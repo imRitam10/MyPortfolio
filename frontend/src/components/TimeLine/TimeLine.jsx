@@ -33,7 +33,9 @@ const TimeLine = ({ timelines = [] }) => {
 						</TimelineSeparator>
 						<TimelineContent sx={{ py: "12px", px: 2 }}>
 							<Typography variant="h6">{item.title}</Typography>
-							<Typography>{item.description}</Typography>
+							<Typography>
+								<a href={item.url}>{item.description}</a>
+							</Typography>
 						</TimelineContent>
 					</TimelineItem>
 				))}

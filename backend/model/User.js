@@ -5,11 +5,11 @@ const userSchema = new mongoose.Schema({
 	email: {
 		type: String,
 		unique: true,
-		required: [true, "Please Enter Email"],
+		required: [true, "Please Enter Your Email"],
 	},
 	password: {
 		type: String,
-		required: [true, "Please Enter Password"],
+		required: [true, "Please Enter Your Password"],
 		select: false,
 	},
 
@@ -17,6 +17,7 @@ const userSchema = new mongoose.Schema({
 		{
 			title: String,
 			description: String,
+			url: String,
 			date: Date,
 		},
 	],

@@ -126,37 +126,39 @@ export const updateUser =
 		}
 	};
 
-export const addTimeline = (title, description, date) => async (dispatch) => {
-	try {
-		dispatch({
-			type: "ADD_TIMELINE_REQUEST",
-		});
+export const addTimeline =
+	(title, description, url, date) => async (dispatch) => {
+		try {
+			dispatch({
+				type: "ADD_TIMELINE_REQUEST",
+			});
 
-		const { data } = await axios.post(
-			"/api/v1/admin/timeline/add",
-			{
-				title,
-				description,
-				date,
-			},
-			{
-				headers: {
-					"Content-Type": "application/json",
+			const { data } = await axios.post(
+				"/api/v1/admin/timeline/add",
+				{
+					title,
+					description,
+					url,
+					date,
 				},
-			}
-		);
+				{
+					headers: {
+						"Content-Type": "application/json",
+					},
+				}
+			);
 
-		dispatch({
-			type: "ADD_TIMELINE_SUCCESS",
-			payload: data.message,
-		});
-	} catch (error) {
-		dispatch({
-			type: "ADD_TIMELINE_FAILURE",
-			payload: error.response.data.message,
-		});
-	}
-};
+			dispatch({
+				type: "ADD_TIMELINE_SUCCESS",
+				payload: data.message,
+			});
+		} catch (error) {
+			dispatch({
+				type: "ADD_TIMELINE_FAILURE",
+				payload: error.response.data.message,
+			});
+		}
+	};
 
 export const deleteTimeline = (id) => async (dispatch) => {
 	try {
@@ -177,4 +179,3 @@ export const deleteTimeline = (id) => async (dispatch) => {
 		});
 	}
 };
- 
