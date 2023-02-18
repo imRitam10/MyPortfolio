@@ -79,7 +79,18 @@
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 1020px) {
+    .aboutContainer2 {
+        font-size: 30px;
+    }
+
+    .aboutContainer2>div:last-child>p {
+        font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
     .about {
         align-items: flex-end;
         padding-top: 100px;
@@ -94,10 +105,12 @@
         position: relative;
         flex-direction: column;
         animation: aboutAnimationPhone 1s ease-in forwards;
+        font-size: 20px;
     }
 
     .aboutContainer2>div:last-child>p {
         text-align: center !important;
+        font-size: 15px;
     }
 
     .aboutAvatar {
